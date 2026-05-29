@@ -11,14 +11,9 @@ export default defineConfig({
   nitro: {
     preset: "vercel",
     output: {
-      dir: ".output",
-      serverDir: ".output/server",
-      publicDir: ".output/public",
-    },
-  },
-  vite: {
-    build: {
-      outDir: ".output",
+      dir: ".vercel/output",
+      serverDir: ".vercel/output/functions/__server.func",
+      publicDir: ".vercel/output/static",
     },
   },
   tanstackStart: {
