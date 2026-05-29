@@ -10,6 +10,16 @@ export default defineConfig({
   // Force Nitro output for Vercel deployments outside Lovable's hosted context.
   nitro: {
     preset: "vercel",
+    output: {
+      dir: ".output",
+      serverDir: ".output/server",
+      publicDir: ".output/public",
+    },
+  },
+  vite: {
+    build: {
+      outDir: ".output",
+    },
   },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
