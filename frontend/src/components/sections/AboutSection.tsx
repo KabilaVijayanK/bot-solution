@@ -60,7 +60,7 @@ export function AboutSection() {
               >
                 Contact Us
               </a>
-              <a href="/projects" className="text-sm font-medium text-gray-600 hover:text-gray-800">
+              <a href="/portfolio" className="text-sm font-medium text-gray-600 hover:text-gray-800">
                 See Projects
               </a>
             </div>

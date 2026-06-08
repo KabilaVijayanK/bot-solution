@@ -80,15 +80,6 @@ export const NAV_COMPANY = [
 export const OFFICES = [
   {
     flag: "🇮🇳",
-    city: "Mumbai",
-    state: "Maharashtra",
-    desc: "Head office serving pan-India enterprise clients",
-    phone: "+91 98929 69648",
-    email: "sales@thebot.agency",
-    primary: true,
-  },
-  {
-    flag: "🇮🇳",
     city: "Tirunelveli",
     state: "Tamil Nadu",
     desc: "Regional office serving South India operations and government projects",

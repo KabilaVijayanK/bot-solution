@@ -10,8 +10,8 @@ const TOP_LINKS = [
   { label: "Services", key: "services", to: "/services" },
   { label: "Technologies", key: "tech", to: "/services" },
   { label: "Industries", key: "industries", to: "/industries" },
+  { label: "Design", key: "portfolio", to: "/portfolio" },
   { label: "Who We Are", key: "company", to: "/about" },
-  { label: "Success Stories", key: "stories", to: "/projects" },
 ];
 
 function MegaPanel({ open, children }: { open: boolean; children: React.ReactNode }) {
@@ -40,15 +40,15 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full bg-white border-b border-gray-100 transition-all",
-        scrolled && "shadow-md backdrop-blur",
+        "fixed top-0 left-0 right-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 transition-all",
+        scrolled ? "shadow-md" : "shadow-sm",
       )}
       onMouseLeave={() => setOpen(null)}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-18 py-4">
-        <Link to="/" className="flex items-center gap-2">
-          <span className="text-2xl font-bold text-[#1E0A3C]">The Bot</span>
-          <span className="w-2.5 h-2.5 rounded-full brand-gradient" />
+        <Link to="/" className="flex items-center gap-3">
+          <img src="/logo.png" alt="The Bot logo" className="h-28 w-auto" />
+          <span className="sr-only">The Bot</span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
@@ -168,6 +168,7 @@ export function Navbar() {
               {[
                 { label: "Home", to: "/" },
                 { label: "Services", to: "/services" },
+                { label: "Portfolio", to: "/portfolio" },
                 { label: "Industries", to: "/industries" },
                 { label: "Who We Are", to: "/about" },
                 { label: "Success Stories", to: "/projects" },

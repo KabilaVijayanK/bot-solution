@@ -99,8 +99,8 @@ function ContactPage() {
                   <MapPin size={22} className="text-[#EC4899] shrink-0 mt-1" />
                   <div>
                     <h4 className="font-bold text-gray-900">
+                      {o.flag ? <span className="mr-2">{o.flag}</span> : null}
                       {o.city}
-                      {o.primary && " (Head Office)"}
                     </h4>
                     <div className="text-[#EC4899] text-sm">{o.state}</div>
                     <p className="text-gray-500 text-sm mt-1">{o.desc}</p>
@@ -110,10 +110,6 @@ function ContactPage() {
             </div>
 
             <div className="bg-[#1E0A3C] text-white rounded-2xl p-6 mt-4 space-y-2 text-sm">
-              <div className="flex items-center gap-3">
-                <Phone size={16} className="text-[#F472B6]" />
-                {SITE.phone}
-              </div>
               <div className="flex items-center gap-3">
                 <Mail size={16} className="text-[#F472B6]" />
                 {SITE.email}
@@ -142,8 +138,26 @@ function ContactPage() {
       <section className="bg-[#F8F7FF] py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Find Us</h3>
-          <div className="bg-gray-100 rounded-2xl h-80 flex items-center justify-center text-gray-400">
-            Interactive map — embed Google Maps iframe here
+          <div className="bg-gray-100 rounded-2xl h-80 overflow-hidden">
+            <iframe
+              title="Company location"
+              src={
+                "https://maps.google.com/maps?q=https://maps.app.goo.gl/SZFnb2PwsVynM6Ss6?g_st=ic&output=embed"
+              }
+              className="w-full h-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+          <div className="mt-3 text-sm">
+            <a
+              href="https://maps.app.goo.gl/SZFnb2PwsVynM6Ss6?g_st=ic"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#2563eb] underline"
+            >
+              Open location in Google Maps
+            </a>
           </div>
         </div>
       </section>

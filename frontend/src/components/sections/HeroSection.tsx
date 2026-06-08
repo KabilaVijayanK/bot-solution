@@ -21,7 +21,6 @@ export function HeroSection() {
         loop
         playsInline
         preload="metadata"
-        poster="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1600"
       >
         <source src="https://www.pexels.com/download/video/31710198/" type="video/mp4" />
       </video>
@@ -48,8 +47,8 @@ export function HeroSection() {
               variants={fadeUp}
               className="mt-8 max-w-none text-4xl font-bold leading-[0.92] tracking-[-0.045em] sm:text-5xl lg:text-6xl xl:text-7xl"
             >
-              <span className="block whitespace-nowrap">AI-Driven Marketing</span>
-              <span className="block whitespace-nowrap">&amp; Technology Solutions.</span>
+              <span className="block whitespace-nowrap">Smart Technology Solutions</span>
+              <span className="block whitespace-nowrap">for Modern Businesses</span>
             </motion.h1>
 
             <motion.p
@@ -91,26 +90,18 @@ export function HeroSection() {
               ))}
             </motion.div>
           </div>
-          <div className="hidden lg:flex items-center justify-center">
-            <motion.div
-              className="relative translate-x-18"
-              animate={{ y: [0, -12, 0], rotate: [-1, 1, -1], scale: [1, 1.02, 1] }}
-              transition={{ duration: 6, ease: "easeInOut", repeat: Infinity }}
-            >
+          <div className="hidden lg:flex items-end justify-center">
+            <div className="relative translate-x-20 lg:translate-y-12">
               <div className="rounded-3xl p-0 bg-transparent shadow-none">
                 <img
                   src="/ai-head.png"
                   alt="AI illustration"
-                  className="w-[380px] max-w-full h-auto select-none pointer-events-none ai-glow"
+                  className="w-[340px] max-w-full h-auto select-none pointer-events-none ai-glow"
                 />
               </div>
 
-              <motion.div
-                className="absolute -right-8 -bottom-6 h-20 w-20 rounded-full bg-[#7C3AED]/12 blur-2xl"
-                animate={{ opacity: [0.35, 0.8, 0.35], scale: [1, 1.15, 1] }}
-                transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
-              />
-            </motion.div>
+              <div className="absolute -right-8 -bottom-6 h-20 w-20 rounded-full bg-[#7C3AED]/12 blur-2xl" />
+            </div>
           </div>
         </div>
       </motion.div>

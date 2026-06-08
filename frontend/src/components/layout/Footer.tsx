@@ -41,9 +41,8 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2">
-              <span className="text-2xl font-bold">The Bot</span>
-              <span className="w-2.5 h-2.5 rounded-full brand-gradient" />
+            <div className="flex items-center gap-3">
+              <img src="/logo1.png" alt="The Bot logo" className="h-12 w-auto" />
             </div>
             <p className="text-white/60 text-sm mt-3 mb-6 max-w-xs">
               Building the enterprise software that runs modern businesses.
